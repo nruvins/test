@@ -1,0 +1,115 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-card {
+    flex-basis: calc(25% - 15px);
+    
+    /* Одинаковая ширина для трех карт в ряду */
+    border: 1px solid #ccc;
+    /* Граница карты */
+    padding: 10px;
+    /* Внутренний отступ карты */
+    box-sizing: border-box;
+    transition: box-shadow 0.3s;
+}
+.product-card:hover {
+  box-shadow: 5px 5px 10px
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+.login-btn button {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.product-image img {
+    display: block;
+    max-width: 100%;
+    height: 250px;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+.product-title {
+    font-size: 1.2em;
+    margin-top: 0;
+}
+
+.product-price {
+    font-weight: bold;
+}
+
+.product-description {
+    margin-bottom: 15px;
+}
+
+.btn-buy {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+}
+
+.btn-buy:hover {
+    background-color: #0056b3;
+}
+.mob{
+    display: none;}
+
+@media screen and (max-width: 960px) {
+    .mob{
+        display: none;
+    }
+    .product-card {
+        flex-basis: calc(50% - 10px);
+        flex-grow: 1;
+        /* Картки розташовуються в дві колонки на планшеті */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .desktop {
+        display: none;
+        /* Навігація приховується на мобільному екрані */
+    }
+    .mob{
+        display: contents;
+    }
+    .drop{
+         display: none;
+    }
+    .product-card {
+        flex-basis: 100%;
+        /* Картки розташовуються в дві колонки на планшеті */
+    }
+}
+.but:hover + .drop {
+  display: block;
+}
